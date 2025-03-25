@@ -30,30 +30,30 @@ var (
 	MainnetTokenRecoverPortalContract string
 )
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
-	//go:embed chapel/TokenHubContract
-	ChapelTokenHubContract string
-	//go:embed chapel/GovHubContract
-	ChapelGovHubContract string
-	//go:embed chapel/CrossChainContract
-	ChapelCrossChainContract string
-	//go:embed chapel/StakingContract
-	ChapelStakingContract string
-	//go:embed chapel/StakeHubContract
-	ChapelStakeHubContract string
-	//go:embed chapel/StakeCreditContract
-	ChapelStakeCreditContract string
-	//go:embed chapel/GovernorContract
-	ChapelGovernorContract string
-	//go:embed chapel/GovTokenContract
-	ChapelGovTokenContract string
-	//go:embed chapel/TimelockContract
-	ChapelTimelockContract string
-	//go:embed chapel/TokenRecoverPortalContract
-	ChapelTokenRecoverPortalContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
+	//go:embed feline/TokenHubContract
+	FelineTokenHubContract string
+	//go:embed feline/GovHubContract
+	FelineGovHubContract string
+	//go:embed feline/CrossChainContract
+	FelineCrossChainContract string
+	//go:embed feline/StakingContract
+	FelineStakingContract string
+	//go:embed feline/StakeHubContract
+	FelineStakeHubContract string
+	//go:embed feline/StakeCreditContract
+	FelineStakeCreditContract string
+	//go:embed feline/GovernorContract
+	FelineGovernorContract string
+	//go:embed feline/GovTokenContract
+	FelineGovTokenContract string
+	//go:embed feline/TimelockContract
+	FelineTimelockContract string
+	//go:embed feline/TokenRecoverPortalContract
+	FelineTokenRecoverPortalContract string
 )

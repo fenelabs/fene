@@ -2,12 +2,12 @@ package haber_fix
 
 import _ "embed"
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
 )
 
 // contract codes for Mainnet upgrade

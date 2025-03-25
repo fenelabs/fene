@@ -198,7 +198,7 @@ func makeFullNode(ctx *cli.Context) (*node.Node, ethapi.Backend) {
 	stack, cfg := makeConfigNode(ctx)
 	if ctx.IsSet(utils.RialtoHash.Name) {
 		v := ctx.String(utils.RialtoHash.Name)
-		params.RialtoGenesisHash = common.HexToHash(v)
+		params.FelineGenesisHash = common.HexToHash(v)
 	}
 
 	if ctx.IsSet(utils.OverridePassedForkTime.Name) {

@@ -655,10 +655,10 @@ func importHistory(ctx *cli.Context) error {
 	// Determine network.
 	if utils.IsNetworkPreset(ctx) {
 		switch {
-		case ctx.Bool(utils.BSCMainnetFlag.Name):
+		case ctx.Bool(utils.FeneMainnetFlag.Name):
 			network = "mainnet"
-		case ctx.Bool(utils.ChapelFlag.Name):
-			network = "chapel"
+		case ctx.Bool(utils.FelineFlag.Name):
+			network = "feline"
 		}
 	} else {
 		// No network flag set, try to determine network based on files

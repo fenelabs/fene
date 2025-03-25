@@ -12,14 +12,14 @@ var (
 	MainnetCrossChainContract string
 )
 
-// contract codes for Chapel upgrade
+// contract codes for feline upgrade
 var (
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
-	//go:embed chapel/TokenHubContract
-	ChapelTokenHubContract string
-	//go:embed chapel/CrossChainContract
-	ChapelCrossChainContract string
-	//go:embed chapel/StakingContract
-	ChapelStakingContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
+	//go:embed feline/TokenHubContract
+	FelineTokenHubContract string
+	//go:embed feline/CrossChainContract
+	FelineCrossChainContract string
+	//go:embed feline/StakingContract
+	FelineStakingContract string
 )

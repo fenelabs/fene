@@ -14,10 +14,10 @@ var (
 
 // contract codes for Chapel upgrade
 var (
-	//go:embed chapel/TokenManagerContract
-	ChapelTokenManagerContract string
-	//go:embed chapel/TokenHubContract
-	ChapelTokenHubContract string
-	//go:embed chapel/RelayerIncentivizeContract
-	ChapelRelayerIncentivizeContract string
+	//go:embed feline/TokenManagerContract
+	FelineTokenManagerContract string
+	//go:embed feline/TokenHubContract
+	FelineTokenHubContract string
+	//go:embed feline/RelayerIncentivizeContract
+	FelineRelayerIncentivizeContract string
 )

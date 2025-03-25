@@ -51,10 +51,10 @@ type NodeFilterFunc func(*enr.Record) bool
 func ParseEthFilter(chain string) (NodeFilterFunc, error) {
 	var filter forkid.Filter
 	switch chain {
-	case "bsc":
-		filter = forkid.NewStaticFilter(params.BSCChainConfig, core.DefaultBSCGenesisBlock().ToBlock())
-	case "chapel":
-		filter = forkid.NewStaticFilter(params.ChapelChainConfig, core.DefaultChapelGenesisBlock().ToBlock())
+	case "fene":
+		filter = forkid.NewStaticFilter(params.FeneChainConfig, core.DefaultFeneGenesisBlock().ToBlock())
+	case "feline":
+		filter = forkid.NewStaticFilter(params.FelineChainConfig, core.DefaultFelineGenesisBlock().ToBlock())
 	default:
 		return nil, fmt.Errorf("unknown network %q", chain)
 	}

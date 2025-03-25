@@ -8,8 +8,8 @@ var (
 	MainnetValidatorContract string
 )
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
 )

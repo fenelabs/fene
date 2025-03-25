@@ -2,12 +2,12 @@ package gibbs
 
 import _ "embed"
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/TokenHubContract
-	ChapelTokenHubContract string
-	//go:embed chapel/StakingContract
-	ChapelStakingContract string
+	//go:embed feline/TokenHubContract
+	FelineTokenHubContract string
+	//go:embed feline/StakingContract
+	FelineStakingContract string
 )
 
 // contract codes for Mainnet upgrade

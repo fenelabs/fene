@@ -173,18 +173,18 @@ var (
 	}
 	NetworkIdFlag = &cli.Uint64Flag{
 		Name:     "networkid",
-		Usage:    "Explicitly set network id (integer)(For testnets: use --chapel instead)",
+		Usage:    "Explicitly set network id (integer)(For testnets: use --feline instead)",
 		Value:    ethconfig.Defaults.NetworkId,
 		Category: flags.EthCategory,
 	}
-	BSCMainnetFlag = &cli.BoolFlag{
+	FeneMainnetFlag = &cli.BoolFlag{
 		Name:     "mainnet",
-		Usage:    "BSC mainnet",
+		Usage:    "Fene mainnet",
 		Category: flags.EthCategory,
 	}
-	ChapelFlag = &cli.BoolFlag{
-		Name:     "chapel",
-		Usage:    "Chapel network: pre-configured Proof-of-Stake-Authority BSC test network",
+	FelineFlag = &cli.BoolFlag{
+		Name:     "feline",
+		Usage:    "Feline network: pre-configured Proof-of-Stake-Authority Fene test network",
 		Category: flags.EthCategory,
 	}
 	DeveloperFlag = &cli.BoolFlag{
@@ -1223,10 +1223,10 @@ Please note that --` + MetricsHTTPFlag.Name + ` must be set to start the server.
 var (
 	// TestnetFlags is the flag group of all built-in supported testnets.
 	TestnetFlags = []cli.Flag{
-		ChapelFlag,
+		FelineFlag,
 	}
 	// NetworkFlags is the flag group of all built-in supported networks.
-	NetworkFlags = append([]cli.Flag{BSCMainnetFlag}, TestnetFlags...)
+	NetworkFlags = append([]cli.Flag{FeneMainnetFlag}, TestnetFlags...)
 
 	// DatabaseFlags is the flag group of all database flags.
 	DatabaseFlags = []cli.Flag{
@@ -1956,7 +1956,7 @@ func CheckExclusive(ctx *cli.Context, args ...interface{}) {
 // SetEthConfig applies eth-related command line flags to the config.
 func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 	// Avoid conflicting network flags
-	CheckExclusive(ctx, BSCMainnetFlag, DeveloperFlag)
+	CheckExclusive(ctx, FeneMainnetFlag, DeveloperFlag)
 	CheckExclusive(ctx, DeveloperFlag, ExternalSignerFlag) // Can't use both ephemeral unlocked and external signer
 
 	// Set configurations from CLI flags
@@ -2163,21 +2163,21 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 	}
 	// Override any default configs for hard coded networks.
 	switch {
-	case ctx.Bool(BSCMainnetFlag.Name):
+	case ctx.Bool(FeneMainnetFlag.Name):
 		if !ctx.IsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 56
+			cfg.NetworkId = 115
 		}
-		cfg.Genesis = core.DefaultBSCGenesisBlock()
-		SetDNSDiscoveryDefaults(cfg, params.BSCGenesisHash)
-	case ctx.Bool(ChapelFlag.Name) || cfg.NetworkId == 97:
+		cfg.Genesis = core.DefaultFeneGenesisBlock()
+		SetDNSDiscoveryDefaults(cfg, params.FeneGenesisHash)
+	case ctx.Bool(FelineFlag.Name) || cfg.NetworkId == 116:
 		if !ctx.IsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 97
+			cfg.NetworkId = 116
 		}
-		cfg.Genesis = core.DefaultChapelGenesisBlock()
-		SetDNSDiscoveryDefaults(cfg, params.ChapelGenesisHash)
+		cfg.Genesis = core.DefaultFelineGenesisBlock()
+		SetDNSDiscoveryDefaults(cfg, params.FelineGenesisHash)
 	case ctx.Bool(DeveloperFlag.Name):
 		if !ctx.IsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 1337
+			cfg.NetworkId = 517
 		}
 		cfg.SyncMode = ethconfig.FullSync
 		// Create new developer account or reuse existing one
@@ -2641,10 +2641,10 @@ func DialRPCWithHeaders(endpoint string, headers []string) (*rpc.Client, error) 
 func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	var genesis *core.Genesis
 	switch {
-	case ctx.Bool(BSCMainnetFlag.Name):
-		genesis = core.DefaultBSCGenesisBlock()
-	case ctx.Bool(ChapelFlag.Name):
-		genesis = core.DefaultChapelGenesisBlock()
+	case ctx.Bool(FeneMainnetFlag.Name):
+		genesis = core.DefaultFeneGenesisBlock()
+	case ctx.Bool(FelineFlag.Name):
+		genesis = core.DefaultFelineGenesisBlock()
 	case ctx.Bool(DeveloperFlag.Name):
 		Fatalf("Developer chains are ephemeral")
 	}

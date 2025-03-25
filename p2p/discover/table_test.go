@@ -456,7 +456,7 @@ func TestTable_filterNode(t *testing.T) {
 
 	// Check wrong genesis ENR record
 	var r2 enr.Record
-	r2.Set(enr.WithEntry("eth", eth{ForkID: forkid.NewID(params.BSCChainConfig, core.DefaultChapelGenesisBlock().ToBlock(), uint64(0), uint64(0))}))
+	r2.Set(enr.WithEntry("eth", eth{ForkID: forkid.NewID(params.FeneChainConfig, core.DefaultFelineGenesisBlock().ToBlock(), uint64(0), uint64(0))}))
 	if enrFilter(&r2) {
 		t.Fatalf("filterNode doesn't work correctly for wrong genesis entry")
 	}
@@ -464,7 +464,7 @@ func TestTable_filterNode(t *testing.T) {
 
 	// Check correct genesis ENR record
 	var r3 enr.Record
-	r3.Set(enr.WithEntry("eth", eth{ForkID: forkid.NewID(params.BSCChainConfig, core.DefaultBSCGenesisBlock().ToBlock(), uint64(0), uint64(0))}))
+	r3.Set(enr.WithEntry("eth", eth{ForkID: forkid.NewID(params.FelineChainConfig, core.DefaultFeneGenesisBlock().ToBlock(), uint64(0), uint64(0))}))
 	if !enrFilter(&r3) {
 		t.Fatalf("filterNode doesn't work correctly for correct genesis entry")
 	}

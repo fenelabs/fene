@@ -57,59 +57,59 @@ var (
 	MainnetTokenRecoverPortalContract string
 )
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
 
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
 
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
 
-	//go:embed chapel/SystemRewardContract
-	ChapelSystemRewardContract string
+	//go:embed feline/SystemRewardContract
+	FelineSystemRewardContract string
 
-	//go:embed chapel/LightClientContract
-	ChapelLightClientContract string
+	//go:embed feline/LightClientContract
+	FelineLightClientContract string
 
-	//go:embed chapel/TokenHubContract
-	ChapelTokenHubContract string
+	//go:embed feline/TokenHubContract
+	FelineTokenHubContract string
 
-	//go:embed chapel/RelayerIncentivizeContract
-	ChapelRelayerIncentivizeContract string
+	//go:embed feline/RelayerIncentivizeContract
+	FelineRelayerIncentivizeContract string
 
-	//go:embed chapel/RelayerHubContract
-	ChapelRelayerHubContract string
+	//go:embed feline/RelayerHubContract
+	FelineRelayerHubContract string
 
-	//go:embed chapel/GovHubContract
-	ChapelGovHubContract string
+	//go:embed feline/GovHubContract
+	FelineGovHubContract string
 
-	//go:embed chapel/TokenManagerContract
-	ChapelTokenManagerContract string
+	//go:embed feline/TokenManagerContract
+	FelineTokenManagerContract string
 
-	//go:embed chapel/CrossChainContract
-	ChapelCrossChainContract string
+	//go:embed feline/CrossChainContract
+	FelineCrossChainContract string
 
-	//go:embed chapel/StakingContract
-	ChapelStakingContract string
+	//go:embed feline/StakingContract
+	FelineStakingContract string
 
-	//go:embed chapel/StakeHubContract
-	ChapelStakeHubContract string
+	//go:embed feline/StakeHubContract
+	FelineStakeHubContract string
 
-	//go:embed chapel/StakeCreditContract
-	ChapelStakeCreditContract string
+	//go:embed feline/StakeCreditContract
+	FelineStakeCreditContract string
 
-	//go:embed chapel/GovernorContract
-	ChapelGovernorContract string
+	//go:embed feline/GovernorContract
+	FelineGovernorContract string
 
-	//go:embed chapel/GovTokenContract
-	ChapelGovTokenContract string
+	//go:embed feline/GovTokenContract
+	FelineGovTokenContract string
 
-	//go:embed chapel/TimelockContract
-	ChapelTimelockContract string
+	//go:embed feline/TimelockContract
+	FelineTimelockContract string
 
-	//go:embed chapel/TokenRecoverPortalContract
-	ChapelTokenRecoverPortalContract string
+	//go:embed feline/TokenRecoverPortalContract
+	FelineTokenRecoverPortalContract string
 )
 
 // contract codes for Rialto upgrade

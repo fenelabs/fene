@@ -12,12 +12,12 @@ var (
 	MainnetSystemRewardContract string
 )
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
-	//go:embed chapel/SystemRewardContract
-	ChapelSystemRewardContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
+	//go:embed feline/SystemRewardContract
+	FelineSystemRewardContract string
 )

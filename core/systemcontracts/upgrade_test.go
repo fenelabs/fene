@@ -30,7 +30,7 @@ func TestAllCodesHash(t *testing.T) {
 
 	allCodes := make([]byte, 0, 10_000_000)
 	for _, hardfork := range upgradesList {
-		for _, network := range []string{mainNet, chapelNet} {
+		for _, network := range []string{mainNet, felineNet} {
 			allCodes = append(allCodes, []byte(network)...)
 			if hardfork[network] != nil {
 				for _, addressConfig := range hardfork[network].Configs {
@@ -46,28 +46,28 @@ func TestAllCodesHash(t *testing.T) {
 
 func TestUpgradeBuildInSystemContractNilInterface(t *testing.T) {
 	var (
-		config               = params.BSCChainConfig
+		config               = params.FeneChainConfig
 		blockNumber          = big.NewInt(37959559)
 		lastBlockTime uint64 = 1713419337
 		blockTime     uint64 = 1713419340
 		statedb       vm.StateDB
 	)
 
-	GenesisHash = params.BSCGenesisHash
+	GenesisHash = params.FeneGenesisHash
 
 	upgradeBuildInSystemContract(config, blockNumber, lastBlockTime, blockTime, statedb)
 }
 
 func TestUpgradeBuildInSystemContractNilValue(t *testing.T) {
 	var (
-		config                   = params.BSCChainConfig
+		config                   = params.FeneChainConfig
 		blockNumber              = big.NewInt(37959559)
 		lastBlockTime uint64     = 1713419337
 		blockTime     uint64     = 1713419340
 		statedb       vm.StateDB = (*state.StateDB)(nil)
 	)
 
-	GenesisHash = params.BSCGenesisHash
+	GenesisHash = params.FeneGenesisHash
 
 	upgradeBuildInSystemContract(config, blockNumber, lastBlockTime, blockTime, statedb)
 }

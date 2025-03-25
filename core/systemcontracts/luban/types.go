@@ -2,18 +2,18 @@ package luban
 
 import _ "embed"
 
-// contract codes for Chapel upgrade
+// contract codes for Feline upgrade
 var (
-	//go:embed chapel/ValidatorContract
-	ChapelValidatorContract string
-	//go:embed chapel/SlashContract
-	ChapelSlashContract string
-	//go:embed chapel/SystemRewardContract
-	ChapelSystemRewardContract string
-	//go:embed chapel/RelayerHubContract
-	ChapelRelayerHubContract string
-	//go:embed chapel/CrossChainContract
-	ChapelCrossChainContract string
+	//go:embed feline/ValidatorContract
+	FelineValidatorContract string
+	//go:embed feline/SlashContract
+	FelineSlashContract string
+	//go:embed feline/SystemRewardContract
+	FelineSystemRewardContract string
+	//go:embed feline/RelayerHubContract
+	FelineRelayerHubContract string
+	//go:embed feline/CrossChainContract
+	FelineCrossChainContract string
 )
 
 // contract codes for Mainnet upgrade
